@@ -46,7 +46,7 @@ async function convertTextToMp3(text) {
     console.log("started")
     const request = {
         input: { text: text },
-        voice: { languageCode: "en-US", ssmlGender: "FEMALE" },
+        voice: {languageCode: 'en-US', name: 'en-US-Wavenet-M'},
         audioConfig: { audioEncoding: "MP3" }
     }
 
