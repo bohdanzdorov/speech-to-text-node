@@ -27,7 +27,6 @@ app.post("/synthesis", (req,res)=>{
 });
 
 app.get('/audio', function(req, res){
-    console.log("loaded")
 
     filePath = './output.mp3',
     stat = fs.statSync(filePath);
@@ -37,7 +36,6 @@ app.get('/audio', function(req, res){
         'Content-Length': stat.size
     });
 
-    // We replaced all the event handlers with a simple call to util.pump()
     fs.createReadStream(filePath).pipe(res);
 
 });
